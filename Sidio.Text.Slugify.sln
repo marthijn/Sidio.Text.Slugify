@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidio.Text.Slugify", "src\Sidio.Text.Slugify\Sidio.Text.Slugify.csproj", "{3B09D27F-7843-4146-902F-4F926F0E8183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidio.Text.Slugify.Tests", "src\Sidio.Text.Slugify.Tests\Sidio.Text.Slugify.Tests.csproj", "{992E883D-B59D-4590-AE80-41CCD05C983F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A5FAF816-4A15-4A72-82FD-6CC4FB06C0BB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{808350CD-F67A-4FFD-BD0E-116BAE8D69AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{274144A7-EEDD-4153-B0E2-77B5CCA38591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B09D27F-7843-4146-902F-4F926F0E8183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B09D27F-7843-4146-902F-4F926F0E8183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B09D27F-7843-4146-902F-4F926F0E8183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B09D27F-7843-4146-902F-4F926F0E8183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992E883D-B59D-4590-AE80-41CCD05C983F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992E883D-B59D-4590-AE80-41CCD05C983F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992E883D-B59D-4590-AE80-41CCD05C983F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992E883D-B59D-4590-AE80-41CCD05C983F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B09D27F-7843-4146-902F-4F926F0E8183} = {808350CD-F67A-4FFD-BD0E-116BAE8D69AA}
+		{992E883D-B59D-4590-AE80-41CCD05C983F} = {274144A7-EEDD-4153-B0E2-77B5CCA38591}
+	EndGlobalSection
+EndGlobal
