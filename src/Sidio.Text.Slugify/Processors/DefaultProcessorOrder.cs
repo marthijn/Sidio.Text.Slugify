@@ -12,6 +12,7 @@ internal static class DefaultProcessorOrder
 
     // processors
     public const int MultiSpaceProcessor = LowerCaseProcessor - DefaultVariation;
-    public const int LowerCaseProcessor = HyphenProcessor - DefaultVariation;
+    public const int LowerCaseProcessor = TrimProcessor - DefaultVariation;
+    public const int TrimProcessor = HyphenProcessor - DefaultVariation;
     public const int HyphenProcessor = int.MaxValue - DefaultVariation;
 }
