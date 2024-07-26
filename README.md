@@ -4,10 +4,11 @@ also called a _slug_.
 
 For example, the string `Hello, World!` will be converted to `hello-world`.
 
-# Installation
-Add the NuGet package to your project.
+[![build](https://github.com/marthijn/Sidio.Text.Slugify/actions/workflows/build.yml/badge.svg)](https://github.com/marthijn/Sidio.Text.Slugify/actions/workflows/build.yml)
+[![NuGet Version](https://img.shields.io/nuget/v/Sidio.Text.Slugify)](https://www.nuget.org/packages/Sidio.Text.Slugify/)
 
-_This package is not yet available on NuGet._
+# Installation
+Add [the NuGet package](https://www.nuget.org/packages/Sidio.Text.Slugify/) to your project.
 
 # Usage
 
