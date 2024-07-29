@@ -38,6 +38,15 @@ var slugifier = Slugifier.Create();
 var slug = slugifier.Slugify("Hello, World!");
 ```
 
+## Extensions
+Using the extension method is not recommended because it creates a new instance of 
+the `Slugifier` class every time it is called.
+```csharp
+using Sidio.Text.Slugify.Extensions;
+
+var slug = "Hello, World!".Slugify();
+```
+
 # Extensibility
 You can implement your own processors by implementing the `SlugifyProcessor` class. For example:
 ```csharp
