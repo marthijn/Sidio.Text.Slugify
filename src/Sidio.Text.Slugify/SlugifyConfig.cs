@@ -22,6 +22,8 @@ public sealed class SlugifyConfig
     /// When the value is set to null, the <see cref="AmpersandProcessor"/> is not added to the list of processors.
     /// It is recommended to add a space before and after the replacement string to avoid concatenation.
     /// of processors.
+    /// <remarks>When <see cref="AddDefaultProcessors"/> is false, the <see cref="AmpersandProcessor"/> is not included
+    /// regardless of the value.</remarks>
     /// </summary>
     public string? ReplaceAmpersandWith { get; set; } = AmpersandProcessor.DefaultReplaceWith;
 }

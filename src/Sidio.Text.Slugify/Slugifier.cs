@@ -41,16 +41,16 @@ public sealed class Slugifier : ISlugifier
         if (addDefaultProcessors)
         {
             processorList.AddRange(DefaultProcessors);
+
+            if (replaceAmpersandWith != null)
+            {
+                processorList.Add(new AmpersandProcessor(replaceAmpersandWith));
+            }
         }
 
         if (processors != null)
         {
             processorList.AddRange(processors);
-        }
-
-        if (replaceAmpersandWith != null)
-        {
-            processorList.Add(new AmpersandProcessor(replaceAmpersandWith));
         }
 
         processorList.Sort((x, y) => x.Order.CompareTo(y.Order));
