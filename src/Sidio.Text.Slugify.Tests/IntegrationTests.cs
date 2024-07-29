@@ -32,6 +32,7 @@ public sealed class IntegrationTests
             {
                 x.AddDefaultProcessors = false;
                 x.Processors.Add(new LowerCaseProcessor());
+                x.ReplaceAmpersandWith = null;
             });
 
         var serviceProvider = services.BuildServiceProvider();

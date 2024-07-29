@@ -10,7 +10,6 @@ public sealed class Slugifier : ISlugifier
 {
     private static SlugifyProcessor[] DefaultProcessors => new SlugifyProcessor[]
     {
-        new AmpersandProcessor(),
         new EszettProcessor(),
         new HyphenProcessor(),
         new MultiSpaceProcessor(),
@@ -26,11 +25,17 @@ public sealed class Slugifier : ISlugifier
     /// </summary>
     /// <param name="options">The options.</param>
     public Slugifier(IOptions<SlugifyConfig> options)
-        : this(options.Value.AddDefaultProcessors, options.Value.Processors)
+        : this(
+            options.Value.AddDefaultProcessors,
+            options.Value.Processors,
+            options.Value.ReplaceAmpersandWith)
     {
     }
 
-    private Slugifier(bool addDefaultProcessors, IEnumerable<SlugifyProcessor>? processors = null)
+    private Slugifier(
+        bool addDefaultProcessors,
+        IEnumerable<SlugifyProcessor>? processors = null,
+        string? replaceAmpersandWith = AmpersandProcessor.DefaultReplaceWith)
     {
         var processorList = new List<SlugifyProcessor>();
         if (addDefaultProcessors)
@@ -41,6 +46,11 @@ public sealed class Slugifier : ISlugifier
         if (processors != null)
         {
             processorList.AddRange(processors);
+        }
+
+        if (replaceAmpersandWith != null)
+        {
+            processorList.Add(new AmpersandProcessor(replaceAmpersandWith));
         }
 
         processorList.Sort((x, y) => x.Order.CompareTo(y.Order));
