@@ -6,6 +6,7 @@ For example, the string `Hello, World!` will be converted to `hello-world`.
 
 [![build](https://github.com/marthijn/Sidio.Text.Slugify/actions/workflows/build.yml/badge.svg)](https://github.com/marthijn/Sidio.Text.Slugify/actions/workflows/build.yml)
 [![NuGet Version](https://img.shields.io/nuget/v/Sidio.Text.Slugify)](https://www.nuget.org/packages/Sidio.Text.Slugify/)
+[![Coverage Status](https://coveralls.io/repos/github/marthijn/Sidio.Text.Slugify/badge.svg?branch=main)](https://coveralls.io/github/marthijn/Sidio.Text.Slugify?branch=main)
 
 # Installation
 Add [the NuGet package](https://www.nuget.org/packages/Sidio.Text.Slugify/) to your project.
