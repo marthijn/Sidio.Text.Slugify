@@ -11,7 +11,7 @@ public partial class HyphenProcessor : SlugifyProcessor
     private const string Hyphen = "-";
 
 #if !NET7_0_OR_GREATER
-    private static readonly Regex HyphensRegex = new ("\\s", RegexOptions.Compiled);
+    private static readonly Regex HyphensRegex = new("\\s", RegexOptions.Compiled, TimeSpan.FromMilliseconds(ProcessorConstants.RegexMatchTimeoutInMilliseconds));
 #endif
 
     /// <inheritdoc />
@@ -28,7 +28,7 @@ public partial class HyphenProcessor : SlugifyProcessor
     public override int Order => DefaultProcessorOrder.HyphenProcessor;
 
 #if NET7_0_OR_GREATER
-    [GeneratedRegex("\\s")]
+    [GeneratedRegex("\\s", RegexOptions.None, ProcessorConstants.RegexMatchTimeoutInMilliseconds)]
     private static partial Regex HypensRegex();
 #endif
 }

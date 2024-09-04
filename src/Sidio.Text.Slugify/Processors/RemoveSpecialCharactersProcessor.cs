@@ -9,7 +9,7 @@ namespace Sidio.Text.Slugify.Processors;
 public partial class RemoveSpecialCharactersProcessor : SlugifyProcessor
 {
 #if !NET7_0_OR_GREATER
-    private static readonly Regex InvalidCharacterRegex = new ("[^a-zA-Z0-9\\s-]", RegexOptions.Compiled);
+    private static readonly Regex InvalidCharacterRegex = new ("[^a-zA-Z0-9\\s-]", RegexOptions.Compiled, TimeSpan.FromMilliseconds(ProcessorConstants.RegexMatchTimeoutInMilliseconds));
 #endif
 
     /// <inheritdoc />
@@ -26,7 +26,7 @@ public partial class RemoveSpecialCharactersProcessor : SlugifyProcessor
     public override int Order => DefaultProcessorOrder.RemoveSpecialCharactersProcessor;
 
 #if NET7_0_OR_GREATER
-    [GeneratedRegex("[^a-zA-Z0-9\\s-]")]
+    [GeneratedRegex("[^a-zA-Z0-9\\s-]", RegexOptions.None, ProcessorConstants.RegexMatchTimeoutInMilliseconds)]
     private static partial Regex InvalidCharacterRegex();
 #endif
 }

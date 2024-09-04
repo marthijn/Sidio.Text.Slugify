@@ -9,7 +9,7 @@ namespace Sidio.Text.Slugify.Processors;
 public partial class MultiSpaceProcessor : SlugifyProcessor
 {
 #if !NET7_0_OR_GREATER
-    private static readonly Regex MultipleSpacesRegex = new ("\\s+", RegexOptions.Compiled);
+    private static readonly Regex MultipleSpacesRegex = new ("\\s+", RegexOptions.Compiled, TimeSpan.FromMilliseconds(ProcessorConstants.RegexMatchTimeoutInMilliseconds));
 #endif
 
     /// <inheritdoc />
@@ -26,7 +26,7 @@ public partial class MultiSpaceProcessor : SlugifyProcessor
     public override int Order => DefaultProcessorOrder.MultiSpaceProcessor;
 
 #if NET7_0_OR_GREATER
-    [GeneratedRegex("\\s+")]
+    [GeneratedRegex("\\s+", RegexOptions.None, ProcessorConstants.RegexMatchTimeoutInMilliseconds)]
     private static partial Regex MultipleSpacesRegex();
 #endif
 }
