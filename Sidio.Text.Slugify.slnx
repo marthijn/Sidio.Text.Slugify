@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/SolutionItems/">
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Src/">
+    <Project Path="src/Sidio.Text.Slugify/Sidio.Text.Slugify.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="src/Sidio.Text.Slugify.Tests/Sidio.Text.Slugify.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Workflows/">
+    <File Path=".github/dependabot.yml" />
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/dependabot-autoapprove.yml" />
+    <File Path=".github/workflows/release.yml" />
+  </Folder>
+</Solution>
