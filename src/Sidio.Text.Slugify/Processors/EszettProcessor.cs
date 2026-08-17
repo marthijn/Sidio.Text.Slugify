@@ -3,6 +3,7 @@
 /// <summary>
 /// Replaces the German Eszett character with "ss".
 /// </summary>
+[Obsolete("Use LigatureProcessor instead.")]
 public sealed class EszettProcessor : SlugifyProcessor
 {
     /// <inheritdoc />

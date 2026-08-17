@@ -7,6 +7,7 @@ internal static class DefaultProcessorOrder
     // pre-processors
     public const int AmpersandProcessor = DefaultVariation;
     public const int EszettProcessor = AmpersandProcessor + DefaultVariation;
+    public const int LigatureProcessor = AmpersandProcessor + DefaultVariation;
     public const int RemoveDiacriticsProcessor = EszettProcessor + DefaultVariation;
     public const int RemoveSpecialCharactersProcessor = RemoveDiacriticsProcessor + DefaultVariation;
 

@@ -6,7 +6,7 @@ public sealed class SlugifierTests
     [InlineData("Hello, World!", "hello-world")]
     [InlineData("a&b", "a-and-b")]
     [InlineData("!ab123@", "ab123")]
-    [InlineData("ée æd", "ee-d")]
+    [InlineData("ée æd", "ee-aed")]
     public void Slugify_WithDefaultProcessors_ReturnsExpected(string input, string expected)
     {
         // arrange

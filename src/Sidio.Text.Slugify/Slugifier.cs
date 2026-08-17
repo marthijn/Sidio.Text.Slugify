@@ -10,7 +10,7 @@ public sealed class Slugifier : ISlugifier
 {
     private static SlugifyProcessor[] DefaultProcessors => new SlugifyProcessor[]
     {
-        new EszettProcessor(),
+        new LigatureProcessor(),
         new HyphenProcessor(),
         new MultiSpaceProcessor(),
         new LowerCaseProcessor(),
